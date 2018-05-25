@@ -3,7 +3,7 @@ Description: "Cloudformation Template to deploy a Lambda function and supporting
 Parameters:
   pSNSTopicARN:
     Default: ""
-    Description: "Enter ARN for a valid SNS Topic name configured for Config Alerting"
+    Description: "Enter ARN for a valid SNS Topic name configured for Config Alert"
     Type: String
   pJobSchedule:
     Default: "cron(0 12 * * ? *)"
