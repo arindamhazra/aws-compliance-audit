@@ -20,7 +20,11 @@ Parameters:
   pAWSAccountNumbers: 
     Description: "Comma-delimited list of accounts"
     Type: CommaDelimitedList
-    Default: "1234567890, 0987654321"
+    Default: "123456789012, 098765432101"
+  pAggregatorName: 
+    Description: "Enter a name for the Config Aggregator"
+    Type: String
+    Default: "ProdConfigurationAggregator"    
 Resources:
   rConfigurationAggregator: 
     Type: "AWS::Config::ConfigurationAggregator"
@@ -29,7 +33,7 @@ Resources:
         - AccountIds: 
             !Ref pAWSAccountNumbers          
           AllAwsRegions: true
-      ConfigurationAggregatorName: ProdConfigurationAggregator
+      ConfigurationAggregatorName: !Ref pAggregatorName
       
   rLambdaExecutionRole:
     Type: "AWS::IAM::Role"
