@@ -10,7 +10,7 @@ This Project includes a Cloudformation Stack which does following :
 2. Creates the Lambda function from the .zip file stored in the S3 Bucket
 3. Creates a Cloudwatch event to run it on a schedule(cron)
 
-Input:
+## Input:
 1. This Cloudormation stack accepts following Parameters:
   1a. pJobSchedule -  A schedule to run the job
   1b. pLambdaSourceFileName - Source .zip file name
